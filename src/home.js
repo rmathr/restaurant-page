@@ -6,7 +6,6 @@ const generateHomepage = function(){
     const restaurantDescriptionElem = interactDOM().createElementWithClassAndId('p', 'restaurant-description', 'restaurantDescription')
     const mainContent = interactDOM().hookDOMelement('mainContent')
     
-    
     // const homeMain = interactDOM().hookDOMelement('homeMainContent')
     // const pageTitle = interactDOM().hookDOMelement('pageTitle')
     // const restaurantDescription = interactDOM().hookDOMelement('restaurantDescription')

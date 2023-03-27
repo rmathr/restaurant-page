@@ -26,3 +26,12 @@ body {
     flex-grow: 1;
     background-color: blueviolet;
 }
+
+.dessert-container{
+    background-color: antiquewhite;
+}
+
+.foods-image{
+    width: 200px;
+    height: auto;
+}

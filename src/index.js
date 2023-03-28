@@ -6,7 +6,11 @@ import generateContactPage from "./contact"
 const generateHeader = (function(){
     const mainHeader = interactDOM().createElementWithClassAndId('header', 'main-header', 'mainHeader')
     const mainContent = interactDOM().hookDOMelement('mainContent')
-    
+
+    const restaurantTitle = interactDOM().createElementWithClassAndId('div', 'restaurant-title', 'restaurantTitle')
+    restaurantTitle.textContent = 'The Last Bite'
+
+    const buttonsContainer = interactDOM().createElementWithClassAndId('div', 'buttons-container', 'buttonsContainer')
     const homeButton = interactDOM().createElementWithClassAndId('button', 'home-page', 'homePage')
     homeButton.textContent = 'Home'
     const menuButton = interactDOM().createElementWithClassAndId('button', 'menu-page', 'menuPage')
@@ -14,9 +18,11 @@ const generateHeader = (function(){
     const contactButton = interactDOM().createElementWithClassAndId('button', 'contact-page', 'contactPage')
     contactButton.textContent = 'Contact'
 
-    mainHeader.appendChild(homeButton)
-    mainHeader.appendChild(menuButton)
-    mainHeader.appendChild(contactButton)
+    mainHeader.appendChild(restaurantTitle)
+    mainHeader.appendChild(buttonsContainer)
+    buttonsContainer.appendChild(homeButton)
+    buttonsContainer.appendChild(menuButton)
+    buttonsContainer.appendChild(contactButton)
 
     document.body.appendChild(mainHeader)
     return { homeButton, menuButton, contactButton, mainContent }

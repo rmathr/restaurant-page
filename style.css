@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Roboto:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+:root{
+    --font-white: #FEFEFE;
+    --background-color: rgba(0, 0, 0, 0.9);
+    --content-background: #28282B;
+    --card-background: #000000;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url('../src/img/background-image.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.main-header{
+    width: 100%;
+    height: 8rem;
+    background-color: var(--background-color);
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.restaurant-title{
+    font-size: 4rem;
+    color: var(--font-white);
+    font-family: 'Amatic SC', cursive;
+}
+
+
+.buttons-container{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.main-header button {
+    width: 5rem;
+    height: 1.5rem;
+    color: var(--font-white);
+    background-color: transparent;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+}
+
+button{
+    border: none;
+}
+
+.main-header button:hover{
+    transform: translateY(-6px);
+    cursor: pointer;
+}
+
+
+.button-clicked{
+    border-bottom: 2px solid var(--font-white);
+}
+
+#mainContent {
+    order: 2;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.main-menu-content, .home-main-content, .main-contact-content{
+    margin-top: 24px;
+    background-color: var(--content-background);
+    box-shadow: 0 15px 20px rgba(0,0,0,.6);
+}
+
+.page-title{
+    text-align: center;
+    margin: 30px 0;
+    font-size: 1.7rem;
+}
+
+.home-main-content, .main-contact-content{
+    width: 880px;
+    color: var(--font-white);
+}
+
+.restaurant-description{
+    margin: 0 80px; 
+}
+
+.description-paragraph{
+    margin-bottom: 30px;
+    text-align: justify;
+    font-size: 1.2rem;
+    line-height: 32px;
+}
+
+.dessert-content{
+    background-color: var(--background-color);
+    height: fit-content;
+    width: fit-content;
+    display: grid;
+    grid-template-columns: repeat(2, 400px);
+    grid-template-rows: repeat(1, 300px);
+    color: var(--font-white);
+    margin: 0 10px;
+}
+
+.foods-name{
+    font-weight: 700;
+}
+
+.foods-image{
+    width: 180px;
+    height: auto;
+    border-radius: 10%;
+}
+
+.hamburger-content{
+    height: fit-content;
+    width: fit-content;
+    display: grid;
+    grid-template-columns: repeat(2, 400px);
+    grid-template-rows: repeat(4, 300px);
+    margin: 30px;
+    gap: 20px;
+}
+
+.hamburger-container:hover{
+    background-color: var(--card-background);
+}
+
+.hamburger-container, .dessert-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--font-white);
+}
+
+.foods-ingredients{
+    width: 360px;
+    height: 42px;
+    text-align: center;
+}
+
+.main-contact-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-title{
+    text-align: center;
+    margin-top: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.contact-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-container{
+    display: grid;
+    grid-template-columns: 80px 80px 30px 200px; 
+    grid-template-rows: auto;
+    margin: 30px;
+    grid-template-areas: 
+    ". . . img"
+    "name name . img"
+    "role role . img"
+    ". . . img"
+    ". . . img";
+    align-items: center;
+    background-color: var(--card-background);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.contacts-name{
+    grid-area: name;
+    font-size: 1.2rem;
+}
+
+.contacts-role{
+    grid-area: role;
+    font-size: 1rem;
+}
+.contacts-img{
+    width: 180px;
+    border-radius: 50%;
+    height: auto;
+    grid-area: img;
+}
+
+.location-text{
+    margin-top: 30px;
+}
+
+.location-img{
+    width: 480px;
+    height: auto;
+    margin: 10px 0 30px 0;
+}
+
+.footer{
+    margin-top: 30px;
+    height: 36px;
+    background-color: var(--background-color);
+    color: var(--font-white);
+    order: 3;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+.fa-github{
+    margin-left: 8px;
+    color: var(--font-white);
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link, a:visited {
+    color: var(--font-white);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+::-webkit-scrollbar-track {
+    background: #7b7a7a;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: #2f2e2e;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #383232;
+}

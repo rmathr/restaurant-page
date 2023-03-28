@@ -1,28 +1,34 @@
 import interactDOM from "./interact-dom";
+import ellie from "../src/img/ellie.png"
+import dina from "../src/img/dina.png"
+import joel from "../src/img/joel.png"
+import tommy from "../src/img/tommy.png"
+import location from "../src/img/location.png"
+
 
 const contactList = [
     {
         name: "Ellie Williams",
         role: "Director",
-        img: "../src/img/ellie.png",
+        img: ellie,
         order: 0
     },
     {
         name: "Dina Williams",
         role: "General Manager",
-        img: "../src/img/dina.png",
+        img: dina,
         order: 1
     },
     {
         name: "Joel Miller",
         role: "Executive Chef",
-        img: "../src/img/joel.png",
+        img: joel,
         order: 2
     },
     {
         name: "Tommy Miller",
         role: "Sommelier",
-        img: "../src/img/tommy.png",
+        img: tommy,
         order: 3  
     }
 ]
@@ -60,7 +66,7 @@ const generateContactPage = function () {
     interactDOM().appendContacElementAndDefineContent(containerTwo, contactTwo, contactList, 1)
     interactDOM().appendContacElementAndDefineContent(containerThree, contactThree, contactList, 2)
     interactDOM().appendContacElementAndDefineContent(containerFour, contactFour, contactList, 3)
-    locationImg.src = '../src/img/location.png'
+    locationImg.src = location
 
     mainContactContent.appendChild(contactContent)
     contactContent.appendChild(containerOne)

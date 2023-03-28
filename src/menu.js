@@ -1,4 +1,12 @@
 import interactDOM from "./interact-dom";
+import hamburger1 from "../src/img/hamburger-1.jpg"
+import hamburger2 from "../src/img/hamburger-2.jpg"
+import hamburger3 from "../src/img/hamburger-3.jpg"
+import hamburger4 from "../src/img/hamburger-4.jpg"
+import hamburger5 from "../src/img/hamburger-5.jpg"
+import hamburger6 from "../src/img/hamburger-6.jpg"
+import hamburger7 from "../src/img/hamburger-7.jpg"
+import hamburger8 from "../src/img/hamburger-8.jpg"
 
 const menu = {
     desserts: [
@@ -22,56 +30,56 @@ const menu = {
             name: "Apocalypse Burger",
             ingredients: "Italian bread, 2 beef burgers, pork loin, slices of cheddar, mozzarella cheese and barbecue sauce.",
             price: "11",
-            img: "../src/img/hamburger-1.jpg",
+            img: hamburger1,
             order: 0
         },
         {
             name: "Survivor Burger",
             ingredients: "Italian bread, 2 beef burgers, pork loin, bacon, mozzarella cheese and barbecue sauce.",
             price: "12",
-            img: "../src/img/hamburger-2.jpg",
+            img: hamburger2,
             order: 1
         },
         {
             name: " Wasteland Burger",
             ingredients: "Italian bread, 1 beef burger, pulled pork, bacon, cheddar cheese, tomato slices and red onion.",
             price: "9",
-            img: "../src/img/hamburger-3.jpg",
+            img: hamburger3,
             order: 2
         },
         {
             name: "Outbreak Burger",
             ingredients: "Ciabatta bread, 3 beef burgers, cheddar supreme sauce, tomato slices, lettuce and pickles.",
             price: "15",
-            img: "../src/img/hamburger-4.jpg",
+            img: hamburger4,
             order: 3
         },
         {
             name: "Last Bite Burger",
             ingredients: "Italian bread, 2 beef burgers, cheddar cheese, mozzarella cheese, lettuce and onion rings.",
             price: "12",
-            img: "../src/img/hamburger-5.jpg",
+            img: hamburger5,
             order: 4
         },
         {
             name: "Infected Burger",
             ingredients: "Italian bread, 1 beef burger, mozzarella cheese, tomato slices and lettuce.",
             price: "8",
-            img: "../src/img/hamburger-6.jpg",
+            img: hamburger6,
             order: 5
         },
         {
             name: "Clicker Surprise Burger",
             ingredients: "Dark Italian bread, 3 beef burgers, cheddar cheese, fried eggs, and lettuce.",
             price: "14",
-            img: "../src/img/hamburger-7.jpg",
+            img: hamburger7,
             order: 6
         },
         {
             name: "Last Hope Burger",
             ingredients: "Italian bread, 2 beef burgers, bacon, cheddar cheese, lettuce and red onion.",
             price: "11",
-            img: "../src/img/hamburger-8.jpg",
+            img: hamburger8,
             order: 7
         },
     ]

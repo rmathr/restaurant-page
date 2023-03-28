@@ -44,6 +44,7 @@ const generateFooter = (function(){
     document.body.appendChild(mainFooter)
 })()
 
+generateHomepage()
 
 const clearDOM = function(){
     while (generateHeader.mainContent.hasChildNodes()) {

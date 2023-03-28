@@ -19,56 +19,56 @@ const menu = {
     ],
     hamburguers: [
         {
-            name: "Pork Loin Burguer",
+            name: "Apocalypse Burger",
             ingredients: "Italian bread, 2 beef burgers, pork loin, slices of cheddar, mozzarella cheese and barbecue sauce.",
             price: "11",
             img: "../src/img/hamburger-1.jpg",
             order: 0
         },
         {
-            name: "Bacon Pork Loin Burguer",
+            name: "Survivor Burger",
             ingredients: "Italian bread, 2 beef burgers, pork loin, bacon, mozzarella cheese and barbecue sauce.",
             price: "12",
             img: "../src/img/hamburger-2.jpg",
             order: 1
         },
         {
-            name: "Pulled Pork Burguer",
+            name: " Wasteland Burger",
             ingredients: "Italian bread, 1 beef burger, pulled pork, bacon, cheddar cheese, tomato slices and red onion.",
             price: "9",
             img: "../src/img/hamburger-3.jpg",
             order: 2
         },
         {
-            name: "Cheddar Supreme Burguer",
+            name: "Outbreak Burger",
             ingredients: "Ciabatta bread, 3 beef burgers, cheddar supreme sauce, tomato slices, lettuce and pickles.",
             price: "15",
             img: "../src/img/hamburger-4.jpg",
             order: 3
         },
         {
-            name: "Ranch Burger",
+            name: "Last Bite Burger",
             ingredients: "Italian bread, 2 beef burgers, cheddar cheese, mozzarella cheese, lettuce and onion rings.",
             price: "12",
             img: "../src/img/hamburger-5.jpg",
             order: 4
         },
         {
-            name: "Cheeseburger",
+            name: "Infected Burger",
             ingredients: "Italian bread, 1 beef burger, mozzarella cheese, tomato slices and lettuce.",
             price: "8",
             img: "../src/img/hamburger-6.jpg",
             order: 5
         },
         {
-            name: "Dark Burguer",
+            name: "Clicker Surprise Burger",
             ingredients: "Dark Italian bread, 3 beef burgers, cheddar cheese, fried eggs, and lettuce.",
             price: "14",
             img: "../src/img/hamburger-7.jpg",
             order: 6
         },
         {
-            name: "Bacon Burguer",
+            name: "Last Hope Burger",
             ingredients: "Italian bread, 2 beef burgers, bacon, cheddar cheese, lettuce and red onion.",
             price: "11",
             img: "../src/img/hamburger-8.jpg",
@@ -135,14 +135,14 @@ const generateMenuContent = function () {
     hamburgerContent.appendChild(hamburgerContainerSix)
     hamburgerContent.appendChild(hamburgerContainerSeven)
     hamburgerContent.appendChild(hamburgerContainerEigth)
-    interactDOM().appendElementAndDefineContent(hamburgerContainerOne, hamburguerOne, menu, 'hamburguers', 0)
-    interactDOM().appendElementAndDefineContent(hamburgerContainerTwo, hamburguerTwo, menu, 'hamburguers', 1)
-    interactDOM().appendElementAndDefineContent(hamburgerContainerThree, hamburguerThree, menu, 'hamburguers', 2)
-    interactDOM().appendElementAndDefineContent(hamburgerContainerFour, hamburguerFour, menu, 'hamburguers', 3)
-    interactDOM().appendElementAndDefineContent(hamburgerContainerFive, hamburguerFive, menu, 'hamburguers', 4)
-    interactDOM().appendElementAndDefineContent(hamburgerContainerSix, hamburguerSix, menu, 'hamburguers', 5)
-    interactDOM().appendElementAndDefineContent(hamburgerContainerSeven, hamburguerSeven, menu, 'hamburguers', 6)
-    interactDOM().appendElementAndDefineContent(hamburgerContainerEigth, hamburguerEight, menu, 'hamburguers', 7)
+    interactDOM().appendMenuElementAndDefineContent(hamburgerContainerOne, hamburguerOne, menu, 'hamburguers', 0)
+    interactDOM().appendMenuElementAndDefineContent(hamburgerContainerTwo, hamburguerTwo, menu, 'hamburguers', 1)
+    interactDOM().appendMenuElementAndDefineContent(hamburgerContainerThree, hamburguerThree, menu, 'hamburguers', 2)
+    interactDOM().appendMenuElementAndDefineContent(hamburgerContainerFour, hamburguerFour, menu, 'hamburguers', 3)
+    interactDOM().appendMenuElementAndDefineContent(hamburgerContainerFive, hamburguerFive, menu, 'hamburguers', 4)
+    interactDOM().appendMenuElementAndDefineContent(hamburgerContainerSix, hamburguerSix, menu, 'hamburguers', 5)
+    interactDOM().appendMenuElementAndDefineContent(hamburgerContainerSeven, hamburguerSeven, menu, 'hamburguers', 6)
+    interactDOM().appendMenuElementAndDefineContent(hamburgerContainerEigth, hamburguerEight, menu, 'hamburguers', 7)
     mainContent.appendChild(mainMenuContent)
 }
 

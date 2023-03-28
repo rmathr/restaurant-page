@@ -14,7 +14,7 @@ const interactDOM = function(){
         return elem
     }
 
-    const appendElementAndDefineContent = function(container, element, menu , type, order){
+    const appendMenuElementAndDefineContent = function(container, element, menu , type, order){
         container.appendChild(element.name)
         container.appendChild(element.ingredients)
         // container.appendChild(element.price)
@@ -27,11 +27,17 @@ const interactDOM = function(){
 
     }
 
-    const appendContacElementAndDefineContent = function(container, element, contacList, ){
+    const appendContacElementAndDefineContent = function(container, element, contactList, order){
+        container.appendChild(element.name)
+        container.appendChild(element.role)
+        container.appendChild(element.img)
         
+        element.name.textContent = `${contactList[order].name}`
+        element.role.textContent = `${contactList[order].role}`
+        element.img.src = `${contactList[order].img}`
     }
 
-    return { mainContent, createElementWithClassAndId, hookDOMelement, appendElementAndDefineContent }
+    return { mainContent, createElementWithClassAndId, hookDOMelement, appendMenuElementAndDefineContent, appendContacElementAndDefineContent }
 }
 
 export default interactDOM

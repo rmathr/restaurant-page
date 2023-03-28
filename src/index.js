@@ -28,6 +28,22 @@ const generateHeader = (function(){
     return { homeButton, menuButton, contactButton, mainContent }
 })()
 
+const generateFooter = (function(){
+    const mainFooter = interactDOM().createElementWithClassAndId('footer', 'footer', 'footer')
+    const footerText = interactDOM().createElementWithClassAndId('p', 'footer-text', 'footerText')
+    const footerLink = interactDOM().createElementWithClassAndId('a', 'fa-brands', 'footerLink')
+    footerLink.classList.add('fa-github')
+    footerLink.href = 'https://github.com/rmathr'
+
+    mainFooter.appendChild(footerText)
+    mainFooter.appendChild(footerLink)
+
+    footerText.textContent = 'rmath©'
+
+    document.body.appendChild(mainFooter)
+})()
+
+
 const clearDOM = function(){
     while (generateHeader.mainContent.hasChildNodes()) {
         generateHeader.mainContent.removeChild(generateHeader.mainContent.firstChild);
@@ -37,31 +53,26 @@ const clearDOM = function(){
 generateHeader.contactButton.addEventListener('click', e => {
     e.preventDefault()
     clearDOM()
+    generateHeader.contactButton.classList.add('button-clicked')
+    generateHeader.menuButton.classList.remove('button-clicked')
+    generateHeader.homeButton.classList.remove('button-clicked')
     generateContactPage()
 })
 
 generateHeader.menuButton.addEventListener('click', e =>{
     e.preventDefault()
     clearDOM()
+    generateHeader.contactButton.classList.remove('button-clicked')
+    generateHeader.menuButton.classList.add('button-clicked')
+    generateHeader.homeButton.classList.remove('button-clicked')
     generateMenuContent()
 })
 
 generateHeader.homeButton.addEventListener('click', e => {
     e.preventDefault()
     clearDOM()
+    generateHeader.contactButton.classList.remove('button-clicked')
+    generateHeader.menuButton.classList.remove('button-clicked')
+    generateHeader.homeButton.classList.add('button-clicked')
     generateHomepage()
 })
-// const changePage = interactDOM().createElementWithClassAndId('button', 'change-page', 'changePage')
-// changePage.textContent = 'Change'
-// const mainContent = interactDOM().hookDOMelement('mainContent')
-// mainContent.appendChild(changePage)
-
-
-// changePage.addEventListener('click', e => {
-//     e.preventDefault()
-//     generateContactPage()
-// })
-
-
-// generateHomepage()
-// generateContactPage()

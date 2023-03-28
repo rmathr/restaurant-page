@@ -1,72 +1,77 @@
 import interactDOM from "./interact-dom";
 
-const contactList = []
-
-const createContact = (name, role, phone, order) => {
-    const state = {
-        name,
-        role,
-        phone,
-        order
+const contactList = [
+    {
+        name: "Ellie Williams",
+        role: "Director",
+        img: "../src/img/ellie.png",
+        order: 0
+    },
+    {
+        name: "Dina Williams",
+        role: "General Manager",
+        img: "../src/img/dina.png",
+        order: 1
+    },
+    {
+        name: "Joel Miller",
+        role: "Executive Chef",
+        img: "../src/img/joel.png",
+        order: 2
+    },
+    {
+        name: "Tommy Miller",
+        role: "Sommelier",
+        img: "../src/img/tommy.png",
+        order: 3  
     }
-    return { ...state }
-}
+]
 
-const addContact = (name, role, phone, order) => { 
-    const contact = createContact(name, role, phone, order)
+const populateContact = (id) => { 
+    
     const domElements = {
-        name: interactDOM().createElementWithClassAndId('p', `${contact.name}-${contact.order}`, `${contact.name}${contact.order}`),
-        role: interactDOM().createElementWithClassAndId('p', `${contact.role}-${contact.order}`, `${contact.role}${contact.order}`),
-        phone: interactDOM().createElementWithClassAndId('p', `${contact.name}-${contact.order}-phone`, `${contact.name}-${contact.order}Phone`)
+        name: interactDOM().createElementWithClassAndId('p', 'contacts-name', `contactName#${contactList[id].order}`),
+        role: interactDOM().createElementWithClassAndId('p', 'contacts-role', `contactRole#${contactList[id].order}`),
+        img: interactDOM().createElementWithClassAndId('img', 'contacts-img', `contactImg#${contactList[id].order}`)
     }
-    contactList.push(contact)
     return domElements
-
 }
 
 const generateContactPage = function () {
     const mainContent = interactDOM().hookDOMelement('mainContent')
     const mainContactContent = interactDOM().createElementWithClassAndId('main', 'main-contact-content', 'mainContactContent')
     const contactTitle = interactDOM().createElementWithClassAndId('p', 'contact-title', 'contactTitle')
+    const locationText = interactDOM().createElementWithClassAndId('p', 'location-text', 'locationText')
+    const locationImg = interactDOM().createElementWithClassAndId('img', 'location-img', 'locationImg')
+    const contactContent = interactDOM().createElementWithClassAndId('div', 'contact-content', 'contactContent')
     
     const containerOne = interactDOM().createElementWithClassAndId('div', 'contact-container', 'containerOne')
     const containerTwo = interactDOM().createElementWithClassAndId('div', 'contact-container', 'containerTwo')
     const containerThree = interactDOM().createElementWithClassAndId('div', 'contact-container', 'containerThree')
+    const containerFour = interactDOM().createElementWithClassAndId('div', 'contact-container', 'containerFour')
 
-    const contactOne = addContact('Ellie', 'President', '(781) 214 6563', 0)
-    const contactTwo = addContact('Dina', 'Vice-President', '(781) 147 788', 1)
-    const contactThree = addContact('Joel', 'Chef', '(781) 154 4487', 2)
-    
+    const contactOne = populateContact(0)
+    const contactTwo = populateContact(1)
+    const contactThree = populateContact(2)
+    const contactFour = populateContact(3)
+     
     mainContactContent.appendChild(contactTitle)
-    containerOne.appendChild(contactOne.name)
-    containerOne.appendChild(contactOne.role)
-    containerOne.appendChild(contactOne.phone)
+    interactDOM().appendContacElementAndDefineContent(containerOne, contactOne, contactList, 0)
+    interactDOM().appendContacElementAndDefineContent(containerTwo, contactTwo, contactList, 1)
+    interactDOM().appendContacElementAndDefineContent(containerThree, contactThree, contactList, 2)
+    interactDOM().appendContacElementAndDefineContent(containerFour, contactFour, contactList, 3)
+    locationImg.src = '../src/img/location.png'
 
-    containerTwo.appendChild(contactTwo.name)
-    containerTwo.appendChild(contactTwo.role)
-    containerTwo.appendChild(contactTwo.phone)
-
-    containerThree.appendChild(contactThree.name)
-    containerThree.appendChild(contactThree.role)
-    containerThree.appendChild(contactThree.phone)
-
-
-    mainContactContent.appendChild(containerOne)
-    mainContactContent.appendChild(containerTwo)
-    mainContactContent.appendChild(containerThree)
+    mainContactContent.appendChild(contactContent)
+    contactContent.appendChild(containerOne)
+    contactContent.appendChild(containerTwo)
+    contactContent.appendChild(containerThree)
+    contactContent.appendChild(containerFour)
+    mainContactContent.appendChild(locationText)
+    mainContactContent.appendChild(locationImg)
    
-    contactTitle.textContent = 'Contact Us'
-    contactOne.name.textContent = `${contactList[0].name}`
-    contactOne.role.textContent = `${contactList[0].role}`
-    contactOne.phone.textContent = `${contactList[0].phone}`
-
-    contactTwo.name.textContent = `${contactList[1].name}`
-    contactTwo.role.textContent = `${contactList[1].role}`
-    contactTwo.phone.textContent = `${contactList[1].phone}`
-
-    contactThree.name.textContent = `${contactList[2].name}`
-    contactThree.role.textContent = `${contactList[2].role}`
-    contactThree.phone.textContent = `${contactList[2].phone}`
+    contactTitle.textContent = 'Main contacts'
+    locationText.textContent = 'Best burguer place of Teton County, Wyoming. Come visit us (but only if you are not a wolf)'
 
     mainContent.appendChild(mainContactContent)
 }

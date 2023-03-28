@@ -1,5 +1,5 @@
 import interactDOM from "./interact-dom";
-import './style.css';
+
 
 const generateHomepage = function(){
     const homeMainElem = interactDOM().createElementWithClassAndId('main', 'home-main-content','homeMainContent')

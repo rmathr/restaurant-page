@@ -2,7 +2,7 @@ import interactDOM from "./interact-dom"
 import generateHomepage from "./home"
 import generateMenuContent from "./menu"
 import generateContactPage from "./contact"
-import './style.css';
+
 
 const generateHeader = (function(){
     const mainHeader = interactDOM().createElementWithClassAndId('header', 'main-header', 'mainHeader')
